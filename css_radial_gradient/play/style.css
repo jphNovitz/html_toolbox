@@ -1,0 +1,27 @@
+body{
+    padding: 2rem;
+    font-size: 17px;
+}
+
+#example{
+    margin: auto;
+    border: solid 1px #cecece;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 1rem;
+    width: 800px;
+    height: 400px;
+}
+
+#decoration {
+    background: radial-gradient(circle, black 27%, transparent 5%);
+    background-size: 15px 15px;
+    background-repeat: repeat;
+    display: flex;
+    flex: 1;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+}
