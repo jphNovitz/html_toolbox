@@ -16,7 +16,7 @@ body{
 }
 
 #decoration {
-    background: radial-gradient(circle, black 27%, transparent 5%);
+    background-image: radial-gradient(circle, black 27%, transparent 5%);
     background-size: 15px 15px;
     background-repeat: repeat;
     display: flex;

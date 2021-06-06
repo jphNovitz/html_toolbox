@@ -1,31 +1,66 @@
 const sprite = document.getElementById('decoration')
-console.log(sprite.clientWidth)
-console.log(getComputedStyle(sprite).width)
 const width = document.getElementById('width')
 const height = document.getElementById('height')
 const bgWidth = document.getElementById('bg_width')
+const color_input_1 = document.getElementById('color_1')
+const color_input_2 = document.getElementById('color_2')
+const pc_input_1 = document.getElementById('pc_1')
+const pc_input_2 = document.getElementById('pc_2')
+
+var color_1 = 'black';
+var color_2 = 'transparent';
+
+var pc_1 = 27;
+var pc_2 = 5;
 
 width.value = sprite.clientWidth
-console.log(width.value)
-width.addEventListener('change', e=> {
+height.value = sprite.clientHeight
+
+function changeGradient() {
+    console.log("radial-gradient(circle, " + color_1 + " "+ pc_1+"%, " + color_2 + " "+ pc_2+"%)")
+    sprite.style.backgroundImage = "radial-gradient(circle, " + color_1 + " "+ pc_1+"%, " + color_2 + " "+ pc_2+"%)";
+    return true;
+}
+
+
+width.addEventListener('change', e => {
     let w = e.target
-    console.log(w.value)
-    sprite.style.width = w.value+"px"
-   // sprite.clientWidth = w.value
-    //sprite.style.maxWidth = getComputedStyle(sprite).width
-    sprite.style.maxWidth = w.value+"px"
+    sprite.style.width = w.value + "px"
+    sprite.style.maxWidth = w.value + "px"
     console.log(sprite.clientWidth)
 })
 
-height.addEventListener('change', e=> {
+height.addEventListener('change', e => {
     let h = e.target
-    console.log(h.value)
-    sprite.style.height = h.value+"px"
-   // sprite.style.maxidth = w.value+"vw"
+    sprite.style.height = h.value + "px"
 })
 
-bgWidth.addEventListener('change', e=> {
+bgWidth.addEventListener('change', e => {
     let w = e.target
-    console.log(sprite)
-    sprite.style.backgroundSize = w.value+"px " + w.value+"px"
+    sprite.style.backgroundSize = w.value + "px " + w.value + "px"
 })
+
+color_input_1.addEventListener('change', e => {
+    color_1 = e.target.value
+    changeGradient()
+
+})
+
+color_input_2.addEventListener('change', e => {
+    color_2 = e.target.value
+    changeGradient()
+
+})
+
+pc_input_1.addEventListener('change', e => {
+    pc_1 = e.target.value
+    changeGradient()
+
+})
+pc_input_2.addEventListener('change', e => {
+    pc_2 = e.target.value
+    changeGradient()
+
+})
+
+
