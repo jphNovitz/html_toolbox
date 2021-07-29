@@ -1,0 +1,27 @@
+:root{
+    --primary-color: #EDA738;
+    --secondary-color: #82552E;
+}
+
+.hamburger{
+    display: block;
+    width: 24px;
+    height: 14px;
+    border-top: solid 5px var(--primary-color);
+    border-bottom: solid 5px var(--primary-color);
+    position: relative;
+    border-radius: 4px;
+}
+
+.hamburger:before{
+    content: '';
+    height: 0;
+    width: 24px;
+    border-top: solid 3px var(--secondary-color);
+    border-bottom: solid 3px var(--secondary-color);
+    border-radius: 2px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+}
