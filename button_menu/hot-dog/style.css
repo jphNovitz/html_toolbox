@@ -1,0 +1,40 @@
+:root{
+    --primary-color: #000;
+    --secondary-color: #000;
+    --primary-alt: #EDA738;
+    --secondary-alt: #82552E;
+}
+
+
+.hotdog:before{
+    content: '';
+    height: 0;
+    width: 26px;
+    border-top: solid 3px var(--secondary-color);
+    border-bottom: solid 3px var(--secondary-color);
+    border-radius: 2px;
+    position: absolute;
+    top: 4px;
+    left: -5px;
+
+}
+.hotdog.alt:before{
+    border-color: var(--secondary-alt);
+
+}
+
+.hotdog{
+    display: block;
+    margin-left: 5px;
+    width: 16px;
+    height: 14px;
+    border-top: solid 5px var(--primary-color);
+    border-bottom: solid 5px var(--primary-color);
+    position: relative;
+    border-radius: 4px;
+}
+
+.hotdog.alt{
+    border-top-color: var(--primary-alt);
+    border-bottom-color: var(--primary-alt);
+}
