@@ -162,3 +162,29 @@
     left: calc(var(--thick));
     top: calc(var(--thick) * 3 - 4px);
 }
+
+
+/* Fries */
+.fries{
+    display: block;
+    width: var(--width);
+    height: var(--height);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    position: relative;
+    border-radius: var(--radius);
+}
+
+.fries:before{
+    content: '';
+    height: 0;
+    width: calc(var(--width) - var(--thick));
+    background-color: var(--primary-color);
+    border-top: solid calc(var(--thick)/2) var(--primary-color);
+    border-bottom: solid calc(var(--thick)/2) var(--primary-color);
+    border-radius: var(--radius);
+    position: absolute;
+    top: calc(var(--height)/2 - var(--thick)/2);
+    left: var(--thick);
+
+}
