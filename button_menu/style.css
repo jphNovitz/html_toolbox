@@ -188,3 +188,41 @@
     left: var(--thick);
 
 }
+
+/* Cake */
+.cake{
+    display: block;
+    width: var(--width);
+    height: var(--height);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    position: relative;
+    border-radius: var(--radius);
+}
+
+.cake:before{
+    content: '';
+    height: calc(var(--thick)/2);
+    width: calc(var(--thick)/2);
+    background-color: var(--primary-color);
+    border: solid calc(var(--thick)/2) var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    top: calc(var(--thick)/2 - var(--height));
+    left: calc(var(--thick) + 2px);
+
+}
+
+.cake:after{
+    content: '';
+    height: 0;
+    width: var(--width) ;
+    background-color: var(--primary-color);
+    border-top: solid calc(var(--thick)/2) var(--primary-color);
+    border-bottom: solid calc(var(--thick)/2) var(--primary-color);
+    border-radius: var(--radius);
+    position: absolute;
+    top: calc(var(--height)/2 - var(--thick)/2 - 2px);
+    left: 0;
+
+}
