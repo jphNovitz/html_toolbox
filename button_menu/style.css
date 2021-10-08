@@ -269,3 +269,15 @@
 
 }
 
+.candy{
+
+    background: radial-gradient(circle, black 50%, transparent 3%);
+    background-size: var(--thick) calc(var(--thick) + 3px);
+    background-repeat: repeat;
+    display: block;
+    width: calc(var(--width) - var(--thick));
+    height: calc(var(--height) + var(--thick));
+    max-width: var(--width);
+    background-position-x: 0;
+    background-position-y: calc(0 - var(--thick) * 2 - 1px);
+}
