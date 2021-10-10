@@ -25,8 +25,8 @@ Hamburger menu icon only made with html and css
     height: 0;
     width: var(--width);
     background-color: var(--primary-color);
-    border-top: solid calc(var(--thick)/2) var(--primary-color);
-    border-bottom: solid calc(var(--thick)/2) var(--primary-color);
+    border-top: solid calc(var(--thick)/2) var(--secondary-color);
+    border-bottom: solid calc(var(--thick)/2) var(--secondary-color);
     border-radius: var(--radius);
     position: absolute;
     top: calc((var(--height) - var(--thick) * 2) /2 - var(--thick)/2 + 0.5px);
