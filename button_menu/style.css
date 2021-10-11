@@ -4,10 +4,12 @@
     --black: #000;
     --width: 32px;
     --height: 32px;
+    --height-real: calc(var(--height) - var(--thick) * 2);
     --thick: 6px;
     --border-primary: solid var(--thick) var(--primary-color);
     --border-black: solid var(--thick) var(--black);
     --radius: 4px;
+    --top: calc((var(--height) - var(--thick) * 2) /2 - var(--thick)/2 + 0.5px);
 }
 
 
@@ -17,7 +19,7 @@
     content: '';
     height: 0;
     width: var(--width);
-    background-color: var(--primary-color);
+    background-color: var(--black);
     border-top: solid calc(var(--thick)/2) var(--black);
     border-bottom: solid calc(var(--thick)/2) var(--black);
     border-radius: var(--radius);
@@ -45,7 +47,7 @@
     content: '';
     height: 0;
     width: var(--width);
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     border-top: solid calc(var(--thick)/2) var(--secondary-color);
     border-bottom: solid calc(var(--thick)/2) var(--secondary-color);
     border-radius: var(--radius);
@@ -80,18 +82,18 @@
 }
 
 
-/*Hotdog*/
+/* Hotdog */
 
 .hotdog:before{
     content: '';
     height: 0;
     width: calc(var(--width) * 1.34);
-    background-color: var(--primary-color);
-    border-top: solid calc(var(--thick)/2) var(--primary-color);
-    border-bottom: solid calc(var(--thick)/2) var(--primary-color);
+    background-color: var(--black);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
     border-radius: var(--radius);
     position: absolute;
-    top: calc(var(--height)/2 - var(--thick)/2);
+    top: calc((var(--height) - var(--thick) * 2) /2 - var(--thick)/2 + 0.5px);
     left: -5px;
 
 }
@@ -100,21 +102,23 @@
     display: block;
     margin-left: 5px;
     width: var(--width);
-    height: var(--height);
-    border-top: var(--border);
-    border-bottom: var(--border);
+    height: calc(var(--height) - var(--thick) * 2);
+    border-top: var(--border-black);
+    border-bottom: var(--border-black);
     position: relative;
     border-radius: var(--radius);
 }
 
 
+/* veggie */
+
 .veggie:before{
     content: '';
     height: 0;
-    width: 26px;
-    background-color: var(--primary-color);
-    border-top: solid calc(var(--thick)/2) var(--primary-color);
-    border-bottom: solid calc(var(--thick)/2) var(--primary-color);
+    width: var(--width);
+    background-color: var(--black);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
     border-radius: var(--radius);
     position: absolute;
     top: 0;
@@ -122,12 +126,11 @@
 
 }
 
-
 .veggie{
     display: block;
     margin-left: 5px;
     width: var(--width);
-    height: var(--height);
+    height: var(--height-real);
     border: 0;
     position: relative;
     border-radius: var(--radius);
@@ -136,10 +139,10 @@
 .veggie:after{
     content: '';
     height: 0;
-    width: 26px;
-    background-color: var(--primary-color);
-    border-top: solid calc(var(--thick)/2) var(--primary-color);
-    border-bottom: solid calc(var(--thick)/2) var(--primary-color);
+    width: var(--width);
+    background-color: var(--black);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
     border-radius: var(--radius);
     position: absolute;
     bottom: 0;

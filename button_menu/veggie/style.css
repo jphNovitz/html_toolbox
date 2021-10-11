@@ -1,59 +1,62 @@
+/*
+
+Author: Novitz Jean-Philippe <novitz@gmail.com>
+Date: October 2021
+
+Veggie menu icon only made with html and css
+*/
+
 :root{
-    --primary-color: #000;
-    --secondary-color: #000;
-    --primary-alt: #92B810;
-    --secondary-alt: #27560C;
+    --primary-color: #82552E;
+    --secondary-color: #EDA738;
+    --black: #000;
+    --width: 32px;
+    --height: 32px;
+    --height-real: calc(var(--height) - var(--thick) * 2);
+    --thick: 6px;
+    --border-primary: solid var(--thick) var(--primary-color);
+    --border-black: solid var(--thick) var(--black);
+    --radius: 4px;
+    --top: calc((var(--height) - var(--thick) * 2) /2 - var(--thick)/2 + 0.5px);
 }
 
+
+/* veggie */
 
 .veggie:before{
     content: '';
     height: 0;
-    width: 26px;
-    border-top: solid 3px var(--secondary-color);
-    border-bottom: solid 3px var(--secondary-color);
-    background-color:  var(--secondary-color);
-    border-radius: 2px;
+    width: var(--width);
+    background-color: var(--black);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
+    border-radius: var(--radius);
     position: absolute;
     top: 0;
     left: 0;
 
 }
-.veggie.alt:after{
-    border-color: var(--secondary-alt);
-    background-color: var(--secondary-alt);
-
-}
-.veggie.alt:before{
-    border-color: var(--primary-alt);
-    background-color: var(--primary-alt);
-}
 
 .veggie{
     display: block;
     margin-left: 5px;
-    width: 16px;
-    height: 14px;
+    width: var(--width);
+    height: var(--height-real);
     border: 0;
     position: relative;
-    border-radius: 4px;
+    border-radius: var(--radius);
 }
 
 .veggie:after{
     content: '';
     height: 0;
-    width: 26px;
-    border-top: solid 3px var(--secondary-color);
-    border-bottom: solid 3px var(--secondary-color);
-    background-color: var(--secondary-color);
-    border-radius: 2px;
+    width: var(--width);
+    background-color: var(--black);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
+    border-radius: var(--radius);
     position: absolute;
     bottom: 0;
     left: 0;
 
-}
-
-.veggie.alt{
-    border-top-color: var(--primary-alt);
-    border-bottom-color: var(--primary-alt);
 }
