@@ -1,23 +1,25 @@
 :root{
-    --primary-color: #000;
-    --secondary-color: #000;
+    --primary-color: #82552E;
+    --secondary-color: #EDA738;
+    --black: #000;
     --width: 32px;
     --height: 32px;
     --thick: 6px;
-    --border: solid var(--thick) var(--primary-color);
+    --border-primary: solid var(--thick) var(--primary-color);
+    --border-black: solid var(--thick) var(--black);
     --radius: 4px;
 }
 
 
 /*** Hamburger ***/
 
-#hamburger:before{
+.hamburger:before{
     content: '';
     height: 0;
     width: var(--width);
     background-color: var(--primary-color);
-    border-top: solid calc(var(--thick)/2) var(--primary-color);
-    border-bottom: solid calc(var(--thick)/2) var(--primary-color);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
     border-radius: var(--radius);
     position: absolute;
     top: calc((var(--height) - var(--thick) * 2) /2 - var(--thick)/2 + 0.5px);
@@ -25,16 +27,57 @@
     cursor: pointer;
 }
 
-#hamburger{
+.hamburger{
     display: block;
     width: var(--width);
     height: calc(var(--height) - var(--thick) * 2);
-    border-top: var(--border);
-    border-bottom: var(--border);
+    border-top: var(--border-black);
+    border-bottom: var(--border-black);
     position: relative;
     border-radius: var(--radius);
 }
 
+
+
+/*** Hamburger Color***/
+
+.hamburger-color:before{
+    content: '';
+    height: 0;
+    width: var(--width);
+    background-color: var(--primary-color);
+    border-top: solid calc(var(--thick)/2) var(--secondary-color);
+    border-bottom: solid calc(var(--thick)/2) var(--secondary-color);
+    border-radius: var(--radius);
+    position: absolute;
+    top: calc((var(--height) - var(--thick) * 2) /2 - var(--thick)/2 + 0.5px);
+    left: 0;
+    cursor: pointer;
+}
+
+.hamburger-color{
+    display: block;
+    width: var(--width);
+    height: calc(var(--height) - var(--thick) * 2);
+    border-top: var(--border-primary);
+    border-bottom: var(--border-primary);
+    position: relative;
+    border-radius: var(--radius);
+}
+
+
+/* Hamburger Alt */
+
+.hamburger-alt{
+
+    background: linear-gradient(#000 var(--thick), transparent 0% );
+    background-size: var(--thick) 33.34%;
+    background-repeat: repeat;
+    display: block;
+    width: calc(var(--width) - var(--thick));
+    height: calc(var(--height) + var(--thick));
+    max-width: var(--width);
+}
 
 
 /*Hotdog*/

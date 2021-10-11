@@ -1,0 +1,34 @@
+/*
+
+Author: Novitz Jean-Philippe <novitz@gmail.com>
+Date: October 2021
+
+Hamburger menu icon only made using html and css
+Linear gradient
+
+*/
+
+
+:root{
+    --primary-color: #000;
+    --secondary-color: #000;
+    --width: 32px;
+    --height: 32px;
+    --thick: 6px;
+    --border: solid var(--thick) var(--primary-color);
+    --radius: 4px;
+}
+
+
+/* Hamburger Alt */
+
+.hamburger{
+
+    background: linear-gradient(#000 var(--thick), transparent 0% );
+    background-size: var(--thick) 33.34%;
+    background-repeat: repeat;
+    display: block;
+    width: calc(var(--width) - var(--thick));
+    height: calc(var(--height) + var(--thick));
+    max-width: var(--width);
+}
