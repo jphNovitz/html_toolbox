@@ -1,0 +1,61 @@
+/*
+
+Author: Novitz Jean-Philippe <novitz@gmail.com>
+Date: October 2021
+
+Cake menu icon only made with html and css
+*/
+
+:root{
+    --primary-color: #82552E;
+    --secondary-color: #EDA738;
+    --black: #000;
+    --width: 32px;
+    --height: 32px;
+    --height-real: calc(var(--height) - var(--thick) * 2);
+    --thick: 6px;
+    --border-primary: solid var(--thick) var(--primary-color);
+    --border-black: solid var(--thick) var(--black);
+    --radius: 4px;
+    --top: calc((var(--height) - var(--thick) * 2) /2 - var(--thick)/2 + 0.5px);
+}
+
+
+/* Cake */
+
+.cake{
+    display: block;
+    width: var(--width);
+    height: var(--height-real);
+    border-top: var(--border-black);
+    border-bottom: var(--border-black);
+    position: relative;
+    border-radius: var(--radius);
+}
+
+.cake:before{
+    content: '';
+    height: calc(var(--thick)/2);
+    width: calc(var(--thick)/2);
+    background-color: var(--black);
+    border: solid calc(var(--thick)/2) var(--black);
+    border-radius: 50%;
+    position: absolute;
+    top: calc(var(--thick)/2 - var(--height-real));
+    left: calc(var(--width) / 2 - var(--thick) / 2 );
+
+}
+
+.cake:after{
+    content: '';
+    height: 0;
+    width: var(--width) ;
+    background-color: var(--black);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
+    border-radius: var(--radius);
+    position: absolute;
+    top: var(--top);
+    left: 0;
+
+}

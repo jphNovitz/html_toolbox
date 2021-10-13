@@ -214,12 +214,13 @@
 
 
 /* Fries */
+
 .fries{
     display: block;
     width: var(--width);
-    height: var(--height);
-    border-top: var(--border);
-    border-bottom: var(--border);
+    height: var(--height-real);
+    border-top: var(--border-black);
+    border-bottom: var(--border-black);
     position: relative;
     border-radius: var(--radius);
 }
@@ -229,22 +230,24 @@
     height: 0;
     width: calc(var(--width) - var(--thick));
     background-color: var(--primary-color);
-    border-top: solid calc(var(--thick)/2) var(--primary-color);
-    border-bottom: solid calc(var(--thick)/2) var(--primary-color);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
     border-radius: var(--radius);
     position: absolute;
-    top: calc(var(--height)/2 - var(--thick)/2);
+    top: var(--top) ;
     left: var(--thick);
 
 }
 
+
 /* Cake */
+
 .cake{
     display: block;
     width: var(--width);
-    height: var(--height);
-    border-top: var(--border);
-    border-bottom: var(--border);
+    height: var(--height-real);
+    border-top: var(--border-black);
+    border-bottom: var(--border-black);
     position: relative;
     border-radius: var(--radius);
 }
@@ -253,12 +256,12 @@
     content: '';
     height: calc(var(--thick)/2);
     width: calc(var(--thick)/2);
-    background-color: var(--primary-color);
-    border: solid calc(var(--thick)/2) var(--primary-color);
+    background-color: var(--black);
+    border: solid calc(var(--thick)/2) var(--black);
     border-radius: 50%;
     position: absolute;
-    top: calc(var(--thick)/2 - var(--height));
-    left: calc(var(--thick) + 2px);
+    top: calc(var(--thick)/2 - var(--height-real));
+    left: calc(var(--width) / 2 - var(--thick) / 2 );
 
 }
 
@@ -266,28 +269,26 @@
     content: '';
     height: 0;
     width: var(--width) ;
-    background-color: var(--primary-color);
-    border-top: solid calc(var(--thick)/2) var(--primary-color);
-    border-bottom: solid calc(var(--thick)/2) var(--primary-color);
+    background-color: var(--black);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
     border-radius: var(--radius);
     position: absolute;
-    top: calc(var(--height)/2 - var(--thick)/2 - 2px);
+    top: var(--top);
     left: 0;
 
 }
 
 
-
-
 /* Stairs */
+
 .stairs{
     display: block;
     width: calc(var(--width) - var(--thick));
-    height: var(--height);
-    border-top: var(--border);
-    /*border-bottom: var(--border);*/
+    height: var(--height-real);
+    border-top: solid calc(var(--thick) - 1px) var(--black);
     position: relative;
-    border-radius: var(--radius);
+    /*border-radius: var(--radius);*/
     margin-left: calc(2 * var(--thick));
 }
 
@@ -295,12 +296,12 @@
     content: '';
     height: 0;
     width: 100%;
-    background-color: var(--primary-color);
-    border-top: solid calc(var(--thick)/2) var(--primary-color);
-    border-bottom: solid calc(var(--thick)/2) var(--primary-color);
-    border-radius: var(--radius);
+    background-color: var(--black);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
+    /*border-radius: var(--radius);*/
     position: absolute;
-    top: calc(var(--height)/2 - var(--thick)/2 - 2px);
+    top: var(--top);
     left: calc(0px - var(--thick));
 
 }
@@ -309,15 +310,15 @@
     content: '';
     height: 0;
     width: 100%;
-    background-color: var(--primary-color);
-    border-bottom: var(--border);
-    border-radius: var(--radius);
+    background-color: var(--black);
+    border-top: solid calc(var(--thick)/2) var(--black);
+    border-bottom: solid calc(var(--thick)/2) var(--black);
+    /*border-radius: var(--radius);*/
     position: absolute;
-    top: calc(var(--height) - var(--thick)/2);
+    top: var(--height-real) ;
     left: calc(0px - var(--thick) * 2);
 
 }
-
 .candy{
 
     background: radial-gradient(circle, black 50%, transparent 3%);
