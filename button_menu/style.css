@@ -301,7 +301,7 @@
     border-bottom: solid calc(var(--thick)/2) var(--black);
     /*border-radius: var(--radius);*/
     position: absolute;
-    top: var(--top);
+    top:  calc(var(--top) - var(--thick) / 2);
     left: calc(0px - var(--thick));
 
 }
@@ -315,18 +315,18 @@
     border-bottom: solid calc(var(--thick)/2) var(--black);
     /*border-radius: var(--radius);*/
     position: absolute;
-    top: var(--height-real) ;
+    top: calc(var(--top) + var(--thick) ) ;
     left: calc(0px - var(--thick) * 2);
 
 }
 .candy{
 
-    background: radial-gradient(circle, black 50%, transparent 3%);
-    background-size: var(--thick) calc(var(--thick) + 3px);
+    background: radial-gradient(circle, black 60%, transparent 3%);
+    background-size: calc(var(--thick) + 3px) calc(var(--thick) + 3px);
     background-repeat: repeat;
     display: block;
     width: calc(var(--width) - var(--thick));
-    height: calc(var(--height) + var(--thick));
+    height: calc(var(--height) + var(--thick) - 2px );
     max-width: var(--width);
     background-position-x: 0;
     background-position-y: calc(0 - var(--thick) * 2 - 1px);
@@ -334,11 +334,12 @@
 
 .kebab{
 
-    background: radial-gradient(circle, black 50%, transparent 3%) center;
-    background-size: var(--thick) calc(var(--thick) + 3px);
+    background: radial-gradient(circle, black 60%, transparent 3%);
+    background-size: calc(var(--thick) + 3px) calc(var(--thick) + 3px);
     background-repeat: repeat-y;
+    background-position-x: center;
     display: block;
     width: calc(var(--width) - var(--thick));
-    height: calc(var(--height) + var(--thick));
+    height: calc(var(--height) + var(--thick) - 2px );
     max-width: var(--width);
 }

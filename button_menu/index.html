@@ -12,14 +12,25 @@ Date: October 2021
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        #container {
-            width: 80%;
+        #header {
+
+        }
+
+        #container, header {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            margin: auto;
+        }
+
+        header{
+            width: 90%;
+            font-size: 1.2rem;
+        }
+        #container{
+            width: 80%;
             align-content: space-around;
             justify-content: space-around;
-            margin: auto;
         }
 
         .child {
@@ -46,6 +57,23 @@ Date: October 2021
     </style>
 </head>
 <body>
+<header>
+    <h1>Comment créer des icones en css ?</h1>
+    <h2>Je me suis pris au jeu d'essayer de créer des icones qui serviraient de bouton 'menu' uniquement avec du
+        css.</h2>
+    <p>Je me suis fixé une règle simple: </p>
+    <ul>
+        <li>Un seul tag <em>span</em>span ou <em>div dans mon code html</em> ou <em>i</em>, car j'ai remarqué que c'est
+            la pratique la plus courante.
+        </li>
+        <li>Le même tag pour tous les boutons</li>
+        <li>Tous ce passe dans le css</li>
+        <li>si possible avoir des icones le plus possible évoluable, je pense à la taille et aux couleurs eventuelles.
+            c'est pourquoi j'ai utilisé les variables css.
+        </li>
+        <li>Je sais ca fait quatre règles.</li>
+    </ul>
+</header>
 <div id="container">
     <div class="child">
         <h2>Hamburger</h2>
